@@ -68,6 +68,7 @@ public class Dashboard {
 	@Then("^User is directed to dashboard$")
 	public void user_is_directed_to_dashboard() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
+		System.out.println("User_is_directed_to_dashboard");
 		
 	}
 
