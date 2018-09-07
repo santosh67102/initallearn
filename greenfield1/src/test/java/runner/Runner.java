@@ -8,8 +8,8 @@ import cucumber.api.junit.Cucumber;
 //@RunWith(SerenityRunner.class)
 
 @CucumberOptions(
-		features="src/test/java/featureFiles/",
-		glue= {"stepDefinition"},
+		features="src/test/java/featureFiles",
+		glue= {"greenfield1.stepDefinition"},
 		monochrome = true
 		//format = {"pretty",
 		
