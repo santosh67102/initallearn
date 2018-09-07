@@ -1,8 +1,14 @@
 package stepDefinition;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.paulhammant.ngwebdriver.ByAngularBinding.FindBy;
 
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -15,6 +21,7 @@ import cucumber.api.java.en.When;
  */
 public class Dashboard {
 	WebDriver driver;
+	
 	
 	@Before()
 	public void setup() {
@@ -44,12 +51,17 @@ public class Dashboard {
 	public void user_is_directed_to_page() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("user_is_directed_to_page");
+		String title = driver.getTitle();
+		assertEquals("FBCP Routing Clusters", title);
 	}
 
 	@Then("^User clicks on the dashboard link \"([^\"]*)\"$")
 	public void user_clicks_on_the_dashboard_link(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("user_clicks_on_the_dashboard_link");
+		WebElement dashboard = driver.findElement(By.linkText("dashboard"));
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[2].click();", dashboard);
 		
 	}
 
@@ -59,16 +71,6 @@ public class Dashboard {
 		
 	}
 
-	@Then("^User clicks on different tab$")
-	public void user_clicks_on_different_tab() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		
-	}
-
-	@Then("^User is directed to that pages$")
-	public void user_is_directed_to_that_pages() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		
-	}
+	
 
 }
