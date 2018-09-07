@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -53,7 +54,7 @@ public class Dashboard {
 		assertEquals("FBCP Routing Clusters", title);
 	}
 
-	@Then("^User clicks on the dashboard link \"([^\"]*)\"$")
+	@And("^User clicks on the dashboard link \"([^\"]*)\"$")
 	public void user_clicks_on_the_dashboard_link(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("user_clicks_on_the_dashboard_link");
