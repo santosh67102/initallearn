@@ -8,13 +8,17 @@ import cucumber.api.junit.Cucumber;
 //@RunWith(SerenityRunner.class)
 
 @CucumberOptions(
-		features="src/test/java/featureFiles",
-		glue= {"greenfield1.stepDefinition"},
+		features="C:\\Users\\A634025\\git\\localrepository\\greenfield1\\src\\test\\java\\featureFiles\\home.feature",
+		glue= {"stepDefinition"},
 		monochrome = true
 		//format = {"pretty",
 		
 		)
 		
 public class Runner {
+	public void runner() {
+		
+	}
 
+	
 }
